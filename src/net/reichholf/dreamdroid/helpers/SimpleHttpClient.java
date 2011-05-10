@@ -7,6 +7,7 @@
 package net.reichholf.dreamdroid.helpers;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.List;
 
 import net.reichholf.dreamdroid.DreamDroid;
@@ -39,7 +40,11 @@ import android.util.Log;
  * @author sreichholf
  * 
  */
-public class SimpleHttpClient {
+public class SimpleHttpClient implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6744281819107969712L;
 	private UsernamePasswordCredentials mCreds = null;
 	private DefaultHttpClient mDhc;
 	private HttpContext mContext;
